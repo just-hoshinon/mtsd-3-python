@@ -9,4 +9,4 @@ RUN python -m venv /app/.venv
 RUN . /app/.venv/bin/activate
 RUN pip install -r requirements/backend.in
 
-ENTRYPOINT uvicorn spaceship.main:app --host=0.0.0.0 --port=8080
+ENTRYPOINT ["uvicorn", "spaceship.main:app", "--host=0.0.0.0", "--port=8080"]
